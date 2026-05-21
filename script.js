@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000";
+const API_URL = "https://instadown-ty63.onrender.com";
 
 async function handleDownload() {
   const input = document.getElementById("urlInput");
