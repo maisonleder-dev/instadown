@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InstaDown — Télécharger des vidéos Instagram gratuitement</title>
+  <meta name="description" content="Téléchargez vos vidéos Instagram gratuitement, en HD, sans inscription." />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Espace pour Google AdSense (à ajouter plus tard) -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="logo">Insta<span>Down</span></div>
+    <ul class="nav-links">
+      <li><a href="#how">Comment ça marche</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <!-- Bannière pub haut de page (décommenter quand AdSense approuvé) -->
+  <!--
+  <div class="ad-top">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX"
+         data-ad-slot="XXXXXXXX" data-ad-format="auto"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  -->
+
+  <section class="hero">
+    <div class="hero-badge">100% Gratuit — Sans inscription</div>
+    <h1 class="hero-title">Télécharge des vidéos<br><span class="accent">Instagram</span> en HD</h1>
+    <p class="hero-sub">Colle ton lien Instagram et télécharge n'importe quelle vidéo en quelques secondes.</p>
+
+    <div class="search-box" id="searchBox">
+      <span class="link-icon">🔗</span>
+      <input
+        class="search-input"
+        type="text"
+        id="urlInput"
+        placeholder="https://www.instagram.com/p/..."
+        autocomplete="off"
+      />
+      <button class="btn-dl" id="btnDownload" onclick="handleDownload()">
+        ⬇ Télécharger
+      </button>
+    </div>
+
+    <p class="error-msg" id="errorMsg"></p>
+
+    <!-- Résultat -->
+    <div class="result-card" id="resultCard" style="display:none;">
+      <img class="result-thumb" id="resultThumb" src="" alt="Aperçu de la vidéo" />
+      <div class="result-info">
+        <p class="result-title" id="resultTitle"></p>
+        <a class="btn-save" id="btnSave" href="#" download="video_instagram.mp4" target="_blank">
+          💾 Sauvegarder la vidéo
+        </a>
+      </div>
+    </div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader" style="display:none;">
+      <div class="spinner"></div>
+      <p>Récupération de la vidéo…</p>
+    </div>
+  </section>
+
+  <!-- Pub milieu de page -->
+  <!--
+  <div class="ad-mid">
+    <ins class="adsbygoogle" ...></ins>
+  </div>
+  -->
+
+  <section class="features">
+    <div class="feat-card">
+      <div class="feat-icon">⚡</div>
+      <div class="feat-title">Rapide</div>
+      <div class="feat-desc">Téléchargement instantané, sans attente</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🎬</div>
+      <div class="feat-title">Haute qualité</div>
+      <div class="feat-desc">Vidéos en HD, qualité originale</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🔓</div>
+      <div class="feat-title">Sans compte</div>
+      <div class="feat-desc">Aucune inscription, aucun email</div>
+    </div>
+  </section>
+
+  <section class="steps-section" id="how">
+    <h2 class="section-title">Comment ça marche ?</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>Copie le lien</strong> — Sur Instagram, clique sur les "…" et sélectionne "Copier le lien"</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>Colle le lien</strong> — Reviens sur InstaDown et colle le lien dans la barre</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>Télécharge</strong> — Clique sur "Télécharger" puis "Sauvegarder la vidéo"</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section" id="faq">
+    <h2 class="section-title">Questions fréquentes</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>C'est vraiment gratuit ?</summary>
+        <p>Oui, 100% gratuit. Le site est financé par la publicité, pas par toi.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Ça marche avec les Reels ?</summary>
+        <p>Oui ! Posts, Reels, et vidéos IGTV sont tous supportés.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Les comptes privés fonctionnent ?</summary>
+        <p>Non. Seules les vidéos de comptes publics peuvent être téléchargées.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quelle qualité ?</summary>
+        <p>La meilleure qualité disponible, généralement HD (720p ou 1080p).</p>
+      </details>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 InstaDown — Outil gratuit de téléchargement de vidéos Instagram</p>
+    <p class="footer-disclaimer">Ce site n'est pas affilié à Instagram ou Meta. Respectez les droits d'auteur.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
